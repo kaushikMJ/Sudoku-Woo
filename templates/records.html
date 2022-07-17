@@ -11,16 +11,28 @@
 
 </style>
 
-<table>
-	
-		{% for record in records %}
-		<tr>
-		<td>Difficulty : {{record.difficulty}}</td> &nbsp
-		<td>Points Scored : {{record.points}}</td>&nbsp
-		<td>Remaining Time : {{record.timer}}</td>&nbsp
-		<td>Remaining life : {{record.life}}</td>&nbsp
-		<td>Date : {{record.date}}</td>
-		</tr>
-		{% endfor %}
-</table>
+
+	<div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+        {% if userTodos %}
+            <div class="list-group">
+				{% for record in records %}
+				
+				Difficulty : {{record.difficulty}}
+				Points Scored : {{record.points}}&nbsp
+				Remaining Time : {{record.timer}}&nbsp
+				Remaining life : {{record.life}}&nbsp
+				Date : {{record.date}}
+				
+				{% endfor %}
+			</div>
+		{% else %}
+            <div class="text-center">
+                <h2>Looks like you haven't played any matches! Play now.</h2>
+            <br>
+            <a role="button" class="btn btn-primary" href="{% url 'newgame' %}">New Game</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
