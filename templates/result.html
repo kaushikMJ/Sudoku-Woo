@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+	{{message|safe}}
+	<br><br>
+	Here is your result:<br>
+	Difficulty : {{difficulty}}<br>
+	Remaining time : {{remainingTime}}<br>
+	Life Left : {{lifeLeft}}<br>
+	Points Scored : {{points}}
+</div>
+
+{% endblock %}
