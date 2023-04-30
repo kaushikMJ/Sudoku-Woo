@@ -169,11 +169,11 @@ class GenerateSudoku:
 		#self.display(board)
 		i=3
 		j=3
-		#self.gen_dia_code(board,i,j)
+		self.gen_dia_code(board,i,j)
 		#self.display(board)
 		i=6
 		j=6
-		#self.gen_dia_code(board,i,j)
+		self.gen_dia_code(board,i,j)
 		#print("After dia")
 		#self.display(board)
 
